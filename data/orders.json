@@ -1,0 +1,59 @@
+[
+  {
+    "orderId": "SODA-472419",
+    "createdAt": "2026-10-03T13:15:01.426Z",
+    "customer": {
+      "name": "Jordan",
+      "email": "j@test.com",
+      "address": "123 Main St",
+      "city": "Springfield",
+      "zip": "12345"
+    },
+    "items": [
+      {
+        "id": "classic",
+        "name": "Diet Classic",
+        "unitPrice": 2.99,
+        "quantity": 4,
+        "total": 11.96
+      }
+    ],
+    "pricing": {
+      "subtotal": 11.96,
+      "discountRate": 0.2,
+      "discountAmount": 2.39,
+      "shipping": 3.5,
+      "total": 13.07,
+      "currency": "USD"
+    },
+    "deliveryDate": "Mon, Oct 5",
+    "status": "Confirmed & In Bottling Queue"
+  },
+  {
+    "orderId": "SODA-774306",
+    "createdAt": "2026-10-03T13:11:44.807Z",
+    "customer": {
+      "name": "Valued Guest",
+      "email": "guest@soda.plus"
+    },
+    "items": [
+      {
+        "id": "classic",
+        "name": "Diet Classic",
+        "unitPrice": 2.99,
+        "quantity": 2,
+        "total": 5.98
+      }
+    ],
+    "pricing": {
+      "subtotal": 5.98,
+      "discountRate": 0.2,
+      "discountAmount": 1.2,
+      "shipping": 3.5,
+      "total": 8.28,
+      "currency": "USD"
+    },
+    "deliveryDate": "Mon, Oct 5",
+    "status": "Confirmed & In Bottling Queue"
+  }
+]

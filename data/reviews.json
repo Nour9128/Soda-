@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1791033301423,
+    "name": "Test Buyer",
+    "rating": 5,
+    "flavor": "Zero Lime",
+    "comment": "Sensational flavor profile!",
+    "date": "2026-10-03",
+    "verified": true
+  },
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "rating": 5,
+    "flavor": "Diet Classic",
+    "comment": "The crispest zero-sugar soda I have ever tasted! Zero metallic aftertaste, just pure vibrant botanical energy.",
+    "date": "2026-09-28",
+    "verified": true
+  },
+  {
+    "id": 2,
+    "name": "Liam Vance",
+    "rating": 5,
+    "flavor": "Zero Lime",
+    "comment": "The lime zest hits with the sharpest, cleanest sparkle. Packaging is gorgeous and 100% recyclable!",
+    "date": "2026-09-30",
+    "verified": true
+  },
+  {
+    "id": 3,
+    "name": "Elena Rostova",
+    "rating": 5,
+    "flavor": "Diet Classic",
+    "comment": "Switched from generic diet sodas last month. My energy levels are steady and the micro-bubble fizz is unmatched.",
+    "date": "2026-10-02",
+    "verified": true
+  }
+]

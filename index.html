@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soda+ | Pure Zero Refreshment</title>
+  <meta name="description" content="Experience the crisp, clean taste of Soda+. Botanical extracts, zero sugar, zero compromise.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&family=Galada&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <!-- Bubbles Layer -->
+  <div id="bubbles-container"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="header">
+    <a href="#" class="logo" id="logo-btn" title="Soda+ Refresh">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+        <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <span>Soda+</span>
+    </a>
+
+    <nav class="nav">
+      <button class="nav-item active" id="nav-products">Products</button>
+      <button class="nav-item" id="nav-story">Story</button>
+      <button class="nav-item" id="nav-eco">Eco</button>
+      <button class="nav-item" id="nav-reviews">Reviews</button>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="sound-btn" title="Toggle Sound FX (Web Audio)">🔊</button>
+      <button class="cart-btn" id="cart-toggle-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span>Cart</span>
+        <span class="cart-badge" id="header-cart-badge">0</span>
+      </button>
+      <button class="contact-btn" id="contact-toggle-btn">Contact Us</button>
+    </div>
+  </header>
+
+  <!-- Hero Stage -->
+  <main class="hero">
+    <div class="hero-content">
+      <!-- Background Floating Leaves -->
+      <div class="leaves-container">
+        <model-viewer class="leaf l1" data-asset="leaves" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="45deg 75deg 105%"></model-viewer>
+        <model-viewer class="leaf l2" data-asset="leaves" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="-30deg 60deg 105%"></model-viewer>
+        <model-viewer class="leaf l3" data-asset="leaves" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="120deg 85deg 105%"></model-viewer>
+        <model-viewer class="leaf l4" data-asset="leaves" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/leaves.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="10deg 45deg 105%"></model-viewer>
+      </div>
+
+      <!-- Left Hero Column -->
+      <div class="hero-left">
+        <h1 class="main-title large-animation-1">
+          <span class="outline">Pure</span><br>
+          Zero
+        </h1>
+        <p class="description">
+          Unleash the crisp taste of zero sugar. <br>
+          Craft botanicals and micro-bubbles — <br>
+          all in an infinitely recyclable can.
+        </p>
+
+        <div class="cta-group">
+          <button class="primary-btn" id="hero-buy-btn" title="Add active flavor to cart">
+            <span id="hero-buy-text">Add to Cart</span>
+            <span class="plus-icon">+</span>
+          </button>
+          <button class="secondary-pill-btn" id="hero-nutrition-btn">
+            Nutrition Facts
+          </button>
+        </div>
+
+        <div class="award-badge" id="hero-award-badge" title="View Design & Innovation Accreditations">
+          <div class="award-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="award-text">
+            <span class="award-title">DESIGN AWARDS</span>
+            <span class="award-subtitle">PREMIUM BEVERAGE 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Background Floating Berries -->
+      <div class="berries-container-bg">
+        <model-viewer class="berry b7" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="-20deg 110deg 105%"></model-viewer>
+        <model-viewer class="berry b8" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="160deg 45deg 105%"></model-viewer>
+        <model-viewer class="berry b9" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.0" interaction-prompt="none" camera-orbit="45deg 20deg 105%"></model-viewer>
+      </div>
+
+      <!-- Center 3D Can -->
+      <div class="hero-center">
+        <model-viewer id="product-model" data-asset="can" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/deit_soda2.glb" alt="Soda+ 3D Model" camera-controls
+          disable-zoom shadow-intensity="0" environment-image="neutral" exposure="1.5"
+          interaction-prompt="none" camera-orbit="0deg 90deg 380%" field-of-view="30deg"
+          class="main-product-3d">
+        </model-viewer>
+
+        <!-- Floating 3D Micro-Controls -->
+        <div class="can-controls">
+          <button class="can-ctrl-btn" id="btn-auto-rotate" title="Toggle 360 Spin">
+            <span>🔄</span> Auto-Rotate
+          </button>
+          <button class="can-ctrl-btn" id="btn-reset-view" title="Reset View Angle">
+            <span>🎯</span> Reset
+          </button>
+          <button class="can-ctrl-btn" id="btn-pop-can" title="Crack Open The Can">
+            <span>⚡</span> Pop Can!
+          </button>
+        </div>
+      </div>
+
+      <!-- Foreground Floating Berries -->
+      <div class="berries-container">
+        <model-viewer class="berry b1" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="45deg 120deg 105%"></model-viewer>
+        <model-viewer class="berry b2" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="-120deg 45deg 105%"></model-viewer>
+        <model-viewer class="berry b3" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="200deg 90deg 105%"></model-viewer>
+        <model-viewer class="berry b4" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="10deg 20deg 105%"></model-viewer>
+        <model-viewer class="berry b5" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="-45deg 160deg 105%"></model-viewer>
+        <model-viewer class="berry b6" data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb" environment-image="neutral" exposure="1.2" interaction-prompt="none" camera-orbit="80deg 75deg 105%"></model-viewer>
+      </div>
+
+      <!-- Right Column: Carousel & Title -->
+      <div class="hero-right">
+        <div class="product-carousel">
+          <div class="carousel-cards" id="cards">
+            <!-- Injected dynamically from /api/config by main.js -->
+          </div>
+          <div class="carousel-nav">
+            <button class="nav-arrow" id="prev-btn" aria-label="Previous Flavor">←</button>
+            <button class="nav-arrow" id="next-btn" aria-label="Next Flavor">→</button>
+          </div>
+        </div>
+        <h2 class="side-title large-animation-1">
+          <span class="outline">Refreshingly</span><br>
+          Clean
+        </h2>
+      </div>
+    </div>
+  </main>
+
+  <!-- Preload berry models in background -->
+  <div style="display: none;">
+    <model-viewer data-asset="blueberry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/blueberry.glb"></model-viewer>
+    <model-viewer data-asset="cherry" src="https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d/cherry.glb"></model-viewer>
+  </div>
+
+  <!-- ==================== SLIDE-OVER CART DRAWER ==================== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <div class="cart-title">
+        <span>Shopping Cart</span>
+        <span class="cart-badge" id="drawer-cart-badge">0</span>
+      </div>
+      <button class="close-btn" id="close-cart-btn" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-free-shipping">
+      <div id="shipping-text">Add $15.00 for FREE Shipping</div>
+      <div class="shipping-bar-bg">
+        <div class="shipping-bar-fill" id="shipping-fill"></div>
+      </div>
+    </div>
+
+    <div class="cart-body" id="cart-items-container">
+      <div class="cart-empty" id="cart-empty-view">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <p>Your cart is empty.</p>
+        <button class="secondary-pill-btn" id="empty-cart-shop-btn">Pick a Flavor</button>
+      </div>
+      <div id="cart-items-list"></div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="promo-box">
+        <input type="text" class="promo-input" id="promo-input" placeholder="Promo (Try: REFRESH20)">
+        <button class="promo-btn" id="promo-btn">Apply</button>
+      </div>
+
+      <div class="summary-rows">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <span id="summary-subtotal">$0.00</span>
+        </div>
+        <div class="summary-row" id="discount-row" style="display: none; color: var(--lime-accent);">
+          <span>Discount</span>
+          <span id="summary-discount">-$0.00</span>
+        </div>
+        <div class="summary-row">
+          <span>Estimated Shipping</span>
+          <span id="summary-shipping">$3.50</span>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <span id="summary-total">$0.00</span>
+        </div>
+      </div>
+
+      <button class="checkout-btn" id="checkout-start-btn">
+        <span>Proceed to Checkout</span>
+        <span>→</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ==================== PRODUCTS & NUTRITION MODAL ==================== -->
+  <div class="modal-overlay" id="products-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">🧪</div>
+          <div>
+            <h2 class="modal-title">Nutrition & Ingredients</h2>
+            <p class="modal-subtitle">100% Transparent Botanical Formula</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="products-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="flavor-tabs">
+          <button class="flavor-tab active" data-flavor-tab="classic">Diet Classic</button>
+          <button class="flavor-tab" data-flavor-tab="blue">Zero Lime</button>
+        </div>
+
+        <div id="nutrition-tab-content">
+          <!-- Dynamic content loaded from config -->
+        </div>
+
+        <button class="submit-btn" id="nutrition-add-cart-btn">
+          Add <span id="nutrition-flavor-name">Diet Classic</span> to Cart ($2.99)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== OUR STORY MODAL ==================== -->
+  <div class="modal-overlay" id="story-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">🌱</div>
+          <div>
+            <h2 class="modal-title">The Soda+ Story</h2>
+            <p class="modal-subtitle">Pure Refreshment, Zero Compromise</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="story-modal">✕</button>
+      </div>
+      <div class="modal-body" id="story-modal-body">
+        <!-- Injected from config -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== ECO IMPACT MODAL ==================== -->
+  <div class="modal-overlay" id="eco-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">♻️</div>
+          <div>
+            <h2 class="modal-title">Our Zero Footprint Pledge</h2>
+            <p class="modal-subtitle">Infinitely Recyclable Aluminum & Clean Energy</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="eco-modal">✕</button>
+      </div>
+      <div class="modal-body" id="eco-modal-body">
+        <!-- Injected from config -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== REVIEWS MODAL ==================== -->
+  <div class="modal-overlay" id="reviews-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">⭐</div>
+          <div>
+            <h2 class="modal-title">Customer Reviews</h2>
+            <p class="modal-subtitle">Verified Feedback From Soda+ Drinkers</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="reviews-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="reviews-summary-bar">
+          <div>
+            <div class="review-score-big">4.9</div>
+            <div class="stars-row">★★★★★</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-weight: 700;">1,243 Ratings</div>
+            <div style="font-size: 0.8rem; color: var(--muted);">98% would recommend</div>
+          </div>
+        </div>
+
+        <div class="reviews-feed" id="reviews-feed">
+          <!-- Dynamically populated from /api/reviews -->
+        </div>
+
+        <form class="review-form" id="new-review-form">
+          <div style="font-weight: 700; font-size: 0.95rem;">Leave a Review</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="review-name">Your Name</label>
+              <input type="text" id="review-name" class="form-input" placeholder="e.g. Alex M." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="review-flavor">Flavor</label>
+              <select id="review-flavor" class="form-select">
+                <option value="Diet Classic">Diet Classic</option>
+                <option value="Zero Lime">Zero Lime</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Rating</label>
+            <div style="display: flex; gap: 0.5rem; font-size: 1.3rem; cursor: pointer;" id="star-picker">
+              <span data-star="1">★</span>
+              <span data-star="2">★</span>
+              <span data-star="3">★</span>
+              <span data-star="4">★</span>
+              <span data-star="5" style="color: var(--gold-accent);">★</span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="review-comment">Your Thoughts</label>
+            <textarea id="review-comment" class="form-textarea" rows="2" placeholder="How did the micro-bubbles taste?" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submit-review-btn">Publish Review</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CONTACT MODAL ==================== -->
+  <div class="modal-overlay" id="contact-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">💬</div>
+          <div>
+            <h2 class="modal-title">Contact Concierge</h2>
+            <p class="modal-subtitle">We typically reply in under 2 hours</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="contact-modal">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="contact-form" class="review-form" style="background: none; padding: 0; border: none;">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="you@domain.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-subject">Topic</label>
+            <select id="contact-subject" class="form-select">
+              <option value="Product Question">Product & Ingredients</option>
+              <option value="Retail & Stockist">Wholesale & Stockist Inquiry</option>
+              <option value="Order Support">Order & Delivery Assistance</option>
+              <option value="Press & Media">Press & Partnerships</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Message</label>
+            <textarea id="contact-message" class="form-textarea" rows="4" placeholder="How can our beverage team help you?" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn" id="contact-submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== AWARDS MODAL ==================== -->
+  <div class="modal-overlay" id="awards-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">🏆</div>
+          <div>
+            <h2 class="modal-title">Honors & Accreditations</h2>
+            <p class="modal-subtitle">Certified Excellence in Design & Purity</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="awards-modal">✕</button>
+      </div>
+      <div class="modal-body" id="awards-modal-body">
+        <!-- Injected from config -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CHECKOUT MODAL ==================== -->
+  <div class="modal-overlay" id="checkout-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="modal-icon">✨</div>
+          <div>
+            <h2 class="modal-title">Complete Order</h2>
+            <p class="modal-subtitle">Secure 256-Bit Encrypted Checkout</p>
+          </div>
+        </div>
+        <button class="close-btn" data-close-modal="checkout-modal">✕</button>
+      </div>
+
+      <div class="modal-body" id="checkout-form-container">
+        <div class="checkout-steps">
+          <div class="step-tab active">1. Shipping</div>
+          <div class="step-tab active">2. Payment</div>
+          <div class="step-tab">3. Confirmation</div>
+        </div>
+
+        <form id="checkout-form" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Full Name</label>
+              <input type="text" id="ship-name" class="form-input" placeholder="Jordan Bell" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" id="ship-email" class="form-input" placeholder="jordan@example.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Delivery Address</label>
+            <input type="text" id="ship-address" class="form-input" placeholder="742 Evergreen Terrace" required>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">City</label>
+              <input type="text" id="ship-city" class="form-input" placeholder="Springfield" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Postal / Zip</label>
+              <input type="text" id="ship-zip" class="form-input" placeholder="97477" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Payment Option</label>
+            <div class="payment-methods">
+              <div class="payment-card active" data-pay="card">💳 Credit Card</div>
+              <div class="payment-card" data-pay="apple">🍏 Apple Pay</div>
+              <div class="payment-card" data-pay="cod">💵 Cash on Delivery</div>
+            </div>
+          </div>
+
+          <div style="background: rgba(255, 255, 255, 0.04); padding: 0.9rem; border-radius: 12px; border: 1px solid var(--glass-border); font-size: 0.85rem; display: flex; justify-content: space-between;">
+            <span>Total to Charge:</span>
+            <span style="font-weight: 800; color: var(--accent);" id="checkout-total-label">$0.00</span>
+          </div>
+
+          <button type="submit" class="submit-btn" id="confirm-order-btn">
+            <span>Authorize & Place Order</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Order Confirmation View (Shown after checkout) -->
+      <div class="modal-body" id="checkout-success-view" style="display: none;">
+        <div class="order-success-screen">
+          <div class="success-icon-bubble">✓</div>
+          <h2 style="font-size: 1.6rem; font-weight: 800;">Order Confirmed!</h2>
+          <p style="color: var(--muted); max-width: 400px; font-size: 0.9rem;">
+            Thank you! Your cold-chain bottling order is now being prepped. A confirmation email has been dispatched.
+          </p>
+          <div class="order-id-pill" id="success-order-id">SODA-123456</div>
+          <div style="font-size: 0.85rem; color: var(--lime-accent);" id="success-delivery-date">
+            Estimated Delivery: 2-3 Business Days
+          </div>
+          <button class="primary-btn" id="success-continue-btn" style="margin-top: 1rem;">
+            Back to Pure Zero
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+</body>
+</html>
